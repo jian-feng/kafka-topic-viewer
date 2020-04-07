@@ -1,13 +1,7 @@
 デモ用サンプルアプリ
 ===========================
 
-> [kafka-topics-ui](/kafka-topics-ui)は、
-もっと簡単に使え、機能が多いため、お薦めです。
-
-***廃止 2019/05/22***  
-
-元のプロジェクトは、[こちら][1]になります。
-
+このサンプルは、[camel-kafka-vr][1]をベースに少し手直したものです。
 [1]: https://gitlab.com/appdev-demos/camel-kafka-vr
 
 このプロジェクトは、Spring-bootベースのCamelサンプルです。
@@ -20,6 +14,8 @@
 
 ![3d-viewer](assets/3d-viewer.png)
 
+> Kafka Topicの中身を参照する目的なら、[kafka-topics-ui](/kafka-topics-ui)がお薦めです。
+
 
 ## ローカル環境での実行方法:
 
@@ -31,20 +27,17 @@
 
 ### 2. Run the App
 
-	git clone git@github.com:G-Monoplus-Cloud/KafkaPoc.git
-	cd KafkaPoc/kafka-topic-viewer
+	git clone https://github.com/jian-feng/kafka-topic-viewer
+	cd kafka-topic-viewer
 	mvn clean package
-	java -jar ./target/kafka-topic-viewer-0.1-SNAPSHOT.jar 
+	java -jar ./target/kafka-topic-viewer-0.1-SNAPSHOT.jar
 
 > Kafka Brokerの情報を上書きしたい場合は、  
-`java -jar ./target/kafka-topic-viewer-0.1-SNAPSHOT.jar --kafka.broker=192.168.33.71:9092` 
+`java -jar ./target/kafka-topic-viewer-0.1-SNAPSHOT.jar --kafka.broker=192.168.33.71:9092`
 
 ### 3. View REST operations with swagger UI    
 
 [http://localhost:8080/webjars/swagger-ui/2.1.0/index.html?url=/camel/api-docs#](http://localhost:8080/webjars/swagger-ui/2.1.0/index.html?url=/camel/api-docs#)
-
-> リモートからアクセスする場合は、予めSSHポートフォーワードしてブラウザで開いてください。  
-`ssh -i id_rsa -p 60000 root@kafka1dev.e-paas.net -L 8080:localhost:8080`
 
 
 ### 4. Graphical view
@@ -53,8 +46,6 @@
   or  
 [http://localhost:8290/topicview.html](http://localhost:8290/topicview.html)
 
-> リモートからアクセスする場合は、予めSSHポートフォーワードしてブラウザで開いてください。  
-`ssh -i id_rsa -p 60000 root@kafka1dev.e-paas.net -L 8290:localhost:8290`
 
 ### 5. To clean topic, delete and recreate with no consumers running
 
