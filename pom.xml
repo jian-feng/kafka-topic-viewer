@@ -13,7 +13,7 @@
 	<properties>
 		<fuse.bom.version>7.3.0.fuse-730058-redhat-00001</fuse.bom.version>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<swagger.ui.version>2.1.0</swagger.ui.version>
+		<swagger.ui.version>3.23.11</swagger.ui.version>
 		<!-- <swagger.ui.version>3.22.0</swagger.ui.version> -->
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
